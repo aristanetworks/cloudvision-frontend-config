@@ -1,0 +1,40 @@
+{
+  "name": "eslint-config-arista-ts",
+  "version": "1.1.0",
+  "description": "Arista's eslint config for TypeScript code",
+  "author": "extensions@arista.com",
+  "homepage": "http://www.arista.com",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "check": "npm run lint && npm run prettier-check",
+    "lint": "eslint --max-warnings 0 *.js",
+    "prepare": "npm run check",
+    "prettier-check": "prettier -c *.js",
+    "prettier-fix": "prettier --write *.js"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "arista",
+    "typescript",
+    "styleguide"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "2.27.0",
+    "@typescript-eslint/parser": "2.27.0",
+    "eslint-plugin-import": "2.20.2"
+  },
+  "devDependencies": {
+    "@arista/prettier-config": "1.1.2",
+    "babel-eslint": "10.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-config-arista-js": "1.1.18",
+    "eslint-plugin-arista": "0.1.30",
+    "eslint-plugin-flowtype": "4.7.0",
+    "prettier": "2.0.4",
+    "typescript": "3.8.3"
+  }
+}

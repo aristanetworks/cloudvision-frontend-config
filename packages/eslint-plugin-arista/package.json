@@ -1,0 +1,29 @@
+{
+  "name": "eslint-plugin-arista",
+  "version": "0.1.30",
+  "description": "Arista's eslint plugins",
+  "author": "extensions@arista.com",
+  "homepage": "http://www.arista.com",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "check": "npm run lint && npm run test && npm run prettier-check",
+    "lint": "eslint --max-warnings 0 src/**/*.js tests/**/*.js",
+    "prepare": "npm run check && npm run test",
+    "prettier-check": "prettier -c src/**/*.js tests/**/*.js",
+    "prettier-fix": "prettier --write src/**/*.js tests/**/*.js",
+    "test": "node tests/rules/import-order.js",
+    "test:cov": "npm run test"
+  },
+  "dependencies": {
+    "lodash": "4.17.15"
+  },
+  "devDependencies": {
+    "@arista/prettier-config": "1.1.2",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-flowtype": "4.7.0",
+    "eslint-plugin-import": "2.20.2",
+    "prettier": "2.0.4"
+  }
+}

@@ -1,0 +1,164 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.1.18](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-js@1.1.17...eslint-config-arista-js@1.1.18) (2020-03-20)
+
+**Note:** Version bump only for package eslint-config-arista-js
+
+
+
+
+
+## [1.1.17](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-js@1.1.16...eslint-config-arista-js@1.1.17) (2020-03-19)
+
+**Note:** Version bump only for package eslint-config-arista-js
+
+
+
+
+
+## [1.1.16](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-js@1.1.15...eslint-config-arista-js@1.1.16) (2020-03-17)
+
+
+### Reverts
+
+* Revert "chore(lint): remove Flow rules from eslint-config-arista" ([845742f](http://gerrit.corp.arista.io:29418/web-components/commits/845742f94db1bb8c5445bac761720a7e5492820e))
+
+
+
+
+
+## [1.1.15](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-js@1.1.14...eslint-config-arista-js@1.1.15) (2020-03-16)
+
+**Note:** Version bump only for package eslint-config-arista-js
+
+
+
+
+
+## [1.1.14](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-js@1.1.13...eslint-config-arista-js@1.1.14) (2019-12-04)
+
+**Note:** Version bump only for package eslint-config-arista-js
+
+
+
+
+
+## [1.1.13](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-js@1.1.12...eslint-config-arista-js@1.1.13) (2019-10-04)
+
+**Note:** Version bump only for package eslint-config-arista-js
+
+
+
+
+
+## [1.1.12](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-js@1.1.11...eslint-config-arista-js@1.1.12) (2019-09-30)
+
+**Note:** Version bump only for package eslint-config-arista-js
+
+
+
+
+
+## 1.1.11 (2019-09-14)
+
+**Note:** Version bump only for package eslint-config-arista-js
+
+
+
+
+
+## 1.1.10 (2019-09-10)
+
+**Note:** Version bump only for package eslint-config-arista-js
+
+
+
+
+
+## [1.1.9](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-base@1.1.8...eslint-config-arista-base@1.1.9) (2019-08-30)
+
+**Note:** Version bump only for package eslint-config-arista-base
+
+
+
+
+
+## [1.1.8](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-base@1.1.7...eslint-config-arista-base@1.1.8) (2019-08-29)
+
+
+### Bug Fixes
+
+* **eslint:** update replace banned global self with window ([e62698c](http://gerrit.corp.arista.io:29418/web-components/commits/e62698c))
+
+
+
+
+
+## [1.1.7](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-base@1.1.6...eslint-config-arista-base@1.1.7) (2019-08-26)
+
+**Note:** Version bump only for package eslint-config-arista-base
+
+
+
+
+
+## [1.1.6](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-base@1.1.5...eslint-config-arista-base@1.1.6) (2019-08-19)
+
+**Note:** Version bump only for package eslint-config-arista-base
+
+
+
+
+
+## [1.1.5](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-base@1.1.4...eslint-config-arista-base@1.1.5) (2019-08-14)
+
+
+### Bug Fixes
+
+* **eslint-config:** remove unnecessary ESLint rules ([e6f37e3](http://gerrit.corp.arista.io:29418/web-components/commits/e6f37e3))
+
+
+
+
+
+## [1.1.4](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-base@1.1.3...eslint-config-arista-base@1.1.4) (2019-08-13)
+
+**Note:** Version bump only for package eslint-config-arista-base
+
+
+
+
+
+## [1.1.3](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-base@1.1.2...eslint-config-arista-base@1.1.3) (2019-08-12)
+
+**Note:** Version bump only for package eslint-config-arista-base
+
+
+
+
+
+## [1.1.2](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-base@1.1.1...eslint-config-arista-base@1.1.2) (2019-07-26)
+
+**Note:** Version bump only for package eslint-config-arista-base
+
+
+
+
+
+## [1.1.1](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-config-arista-base@1.1.0...eslint-config-arista-base@1.1.1) (2019-07-16)
+
+**Note:** Version bump only for package eslint-config-arista-base
+
+
+
+
+
+# 1.1.0 (2019-07-12)
+
+
+### Features
+
+* **config:** add prettier config, and base eslint and base js config ([752adc0](http://gerrit.corp.arista.io:29418/web-components/commits/752adc0))
