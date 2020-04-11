@@ -1,0 +1,11 @@
+{
+  "name": "cloudvision-frontend-config",
+  "private": true,
+  "scripts": {
+    "clean": "learn run clean",
+    "ci": "lerna bootstrap"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}

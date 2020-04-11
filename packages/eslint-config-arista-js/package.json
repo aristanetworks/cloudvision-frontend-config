@@ -1,0 +1,37 @@
+{
+  "name": "eslint-config-arista-js",
+  "version": "1.1.18",
+  "description": "Arista's eslint config for JavaScript code",
+  "author": "extensions@arista.com",
+  "homepage": "http://www.arista.com",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "check": "npm run lint && npm run prettier-check",
+    "lint": "eslint --max-warnings 0 -c index.js index.js",
+    "prepare": "npm run check",
+    "prettier-check": "prettier -c *.js",
+    "prettier-fix": "prettier --write *.js"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "arista",
+    "javascript",
+    "styleguide"
+  ],
+  "dependencies": {
+    "babel-eslint": "10.1.0",
+    "confusing-browser-globals": "1.0.9",
+    "eslint-plugin-arista": "0.1.30",
+    "eslint-plugin-flowtype": "4.7.0",
+    "eslint-plugin-import": "2.20.2"
+  },
+  "devDependencies": {
+    "@arista/prettier-config": "1.1.2",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "prettier": "2.0.4"
+  }
+}
