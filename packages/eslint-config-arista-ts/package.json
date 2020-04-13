@@ -27,14 +27,7 @@
     "eslint-plugin-import": "2.20.2"
   },
   "devDependencies": {
-    "@arista/prettier-config": "1.1.2",
-    "babel-eslint": "10.1.0",
-    "eslint": "6.8.0",
-    "eslint-config-airbnb-base": "14.1.0",
-    "eslint-config-arista-js": "1.1.18",
-    "eslint-plugin-arista": "0.1.30",
-    "eslint-plugin-flowtype": "4.7.0",
-    "prettier": "2.0.4",
-    "typescript": "3.8.3"
+    "@arista/prettier-config": "file:../prettier-config",
+    "eslint-plugin-arista": "file:../eslint-plugin-arista"
   }
 }
