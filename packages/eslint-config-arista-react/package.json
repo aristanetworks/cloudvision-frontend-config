@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-arista-react",
-  "version": "0.3.13",
+  "version": "0.3.14",
   "description": "Arista's eslint config for React/JSX code",
   "author": "extensions@arista.com",
   "homepage": "http://www.arista.com",
@@ -22,7 +22,7 @@
     "styleguide"
   ],
   "dependencies": {
-    "eslint-config-arista-js": "1.1.19"
+    "eslint-config-arista-js": "1.1.20"
   },
   "devDependencies": {
     "@arista/prettier-config": "1.1.3",
