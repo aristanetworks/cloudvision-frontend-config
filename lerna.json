@@ -11,6 +11,9 @@
         "**/*.md",
         "**/test/**"
       ]
+    },
+    "version": {
+      "message": "chore(release): publish packages"
     }
   }
 }
