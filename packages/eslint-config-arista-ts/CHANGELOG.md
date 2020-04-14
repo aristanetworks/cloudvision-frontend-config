@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.3...eslint-config-arista-ts@1.1.4) (2020-04-14)
+
+
+### Bug Fixes
+
+* **eslint-config-arista-ts:** disable flow on ts files ([cdab311](https://github.com/aristanetworks/cloudvision-frontend-config/commit/cdab311d3d82e0394230043a7c13129016d04a02))
+
+
+
+
+
 ## [1.1.3](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.1...eslint-config-arista-ts@1.1.3) (2020-04-14)
 
 **Note:** Version bump only for package eslint-config-arista-ts
