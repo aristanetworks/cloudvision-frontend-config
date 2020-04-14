@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "clean": "learn run clean",
-    "ci": "lerna bootstrap"
+    "ci": "lerna bootstrap",
+    "lerna-version": "lerna version --conventional-commits --exact --no-push --yes"
   },
   "devDependencies": {
     "lerna": "^3.20.2"

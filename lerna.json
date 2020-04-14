@@ -1,5 +1,16 @@
 {
   "packages": ["packages/*"],
   "npmClient": "npm",
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "publish": {
+      "allowBranch": "master",
+      "ignoreChanges": [
+        "**/.eslintrc",
+        "**/.gitignore",
+        "**/*.md",
+        "**/test/**"
+      ]
+    }
+  }
 }
