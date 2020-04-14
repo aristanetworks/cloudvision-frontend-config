@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 15.9.1 (2020-04-14)
+
+**Note:** Version bump only for package @arista/check-prop-types
+
+
+
+
+
 # [15.9.0](http://gerrit.corp.arista.io:29418/web-components/compare/@arista/check-prop-types@15.8.44...@arista/check-prop-types@15.9.0) (2020-04-08)
 
 

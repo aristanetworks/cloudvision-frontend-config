@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.31 (2020-04-14)
+
+**Note:** Version bump only for package eslint-plugin-arista
+
+
+
+
+
 ## [0.1.30](http://gerrit.corp.arista.io:29418/web-components/compare/eslint-plugin-arista@0.1.29...eslint-plugin-arista@0.1.30) (2020-03-30)
 
 **Note:** Version bump only for package eslint-plugin-arista
