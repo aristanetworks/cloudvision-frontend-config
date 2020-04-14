@@ -1,9 +1,0 @@
-{
-  "out": "docs",
-  "ignoreCompilerErrors": true,
-  "disableOutputCheck": true,
-  "excludeExternals": true,
-  "excludePrivate": true,
-  "hideGenerator": true,
-  "excludeNotExported": true
-}
