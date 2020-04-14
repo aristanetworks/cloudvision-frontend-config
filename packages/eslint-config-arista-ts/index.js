@@ -26,6 +26,7 @@ module.exports = {
         allowExpressions: true,
       },
     ],
+    'flowtype/no-types-missing-file-annotation': 0,
     'import/default': 'off',
     'import/named': 'off',
     'import/namespace': 'off',
