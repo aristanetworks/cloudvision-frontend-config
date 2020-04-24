@@ -19,7 +19,7 @@ commands:
         type: boolean
         default: true
     steps:
-      - run: run.py --access-token $GITHUB_TOKEN --branch master --owner aristanetworks --repo cloudvision --enforce_admins << parameters.enforce >>
+      - run: run.py --access-token $GITHUB_TOKEN --branch master --owner aristanetworks --repo cloudvision-frontend-config --enforce_admins << parameters.enforce >>
 parameters:
   deploy_version:
     type: boolean
@@ -113,6 +113,6 @@ workflows:
       - publish:
           filters:
             tags:
-              only: /(.*)+@[0-9]+(\.[0-9]+)*/
+              only: /@[0-9]+(\.[0-9]+)*/
             branches:
               ignore: /.*/
