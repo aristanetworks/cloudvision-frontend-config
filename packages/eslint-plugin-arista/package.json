@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-arista",
-  "version": "0.1.31",
+  "version": "0.1.32",
   "description": "Arista's eslint plugins",
   "author": "extensions@arista.com",
   "homepage": "http://www.arista.com",
