@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-arista-ts",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Arista's eslint config for TypeScript code",
   "author": "extensions@arista.com",
   "homepage": "http://www.arista.com",
