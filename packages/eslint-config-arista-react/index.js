@@ -33,6 +33,7 @@ module.exports = {
     'react/jsx-wrap-multilines': 'off',
     'react/no-access-state-in-setstate': 'error',
     'react/no-array-index-key': 'off',
+    'react/no-direct-mutation-state': 'error',
     'react/no-find-dom-node': 'error',
     'react/no-string-refs': 'error',
     'react/no-unused-prop-types': 'off',
