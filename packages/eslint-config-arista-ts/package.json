@@ -35,6 +35,6 @@
     "eslint-plugin-arista": "0.1.32",
     "eslint-plugin-flowtype": "4.7.0",
     "prettier": "2.0.5",
-    "typescript": "3.8.3"
+    "typescript": "3.9.3"
   }
 }
