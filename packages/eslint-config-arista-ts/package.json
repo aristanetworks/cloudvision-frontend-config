@@ -33,7 +33,7 @@
     "eslint-config-airbnb-base": "14.1.0",
     "eslint-config-arista-js": "1.1.23",
     "eslint-plugin-arista": "0.1.32",
-    "eslint-plugin-flowtype": "4.7.0",
+    "eslint-plugin-flowtype": "5.1.0",
     "prettier": "2.0.5",
     "typescript": "3.9.3"
   }
