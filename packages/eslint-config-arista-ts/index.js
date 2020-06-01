@@ -14,16 +14,32 @@ module.exports = {
         default: 'array',
       },
     ],
-    '@typescript-eslint/camelcase': [
+    '@typescript-eslint/ban-ts-comment': [
       'error',
       {
-        allow: ['delete_all', 'path_elements'],
+        'ts-ignore': 'allow-with-description',
+        'minimumDescriptionLength': 10,
       },
     ],
     '@typescript-eslint/explicit-function-return-type': [
       'error',
       {
         allowExpressions: true,
+      },
+    ],
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'default',
+        format: ['camelCase'],
+      },
+      {
+        selector: 'property',
+        format: ['camelCase'],
+        filter: {
+          regex: '(delete_all|path_elements)',
+          match: false,
+        },
       },
     ],
     'flowtype/no-types-missing-file-annotation': 0,
@@ -39,7 +55,6 @@ module.exports = {
         jest: true,
       },
       rules: {
-        '@typescript-eslint/ban-ts-ignore': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
       },
     },
