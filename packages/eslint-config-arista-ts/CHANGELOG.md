@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.14](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.13...eslint-config-arista-ts@1.1.14) (2020-06-02)
+
+
+### Bug Fixes
+
+* **eslint-config-arista-ts:** update naming-convention config ([#41](https://github.com/aristanetworks/cloudvision-frontend-config/issues/41)) ([f9e6fa9](https://github.com/aristanetworks/cloudvision-frontend-config/commit/f9e6fa936a32a0c24b497aca33b8ed8c236db503))
+
+
+
+
+
 ## [1.1.13](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.12...eslint-config-arista-ts@1.1.13) (2020-06-02)
 
 **Note:** Version bump only for package eslint-config-arista-ts
