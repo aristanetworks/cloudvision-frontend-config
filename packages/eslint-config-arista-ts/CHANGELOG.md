@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.18](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.17...eslint-config-arista-ts@1.1.18) (2020-06-02)
+
+
+### Bug Fixes
+
+* **eslint-config-arista-ts:** disable camelcase rule ([#45](https://github.com/aristanetworks/cloudvision-frontend-config/issues/45)) ([da12c18](https://github.com/aristanetworks/cloudvision-frontend-config/commit/da12c18e5a764f6be5eb218dda30ad5cca40a9a1))
+
+
+
+
+
 ## [1.1.17](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.16...eslint-config-arista-ts@1.1.17) (2020-06-02)
 
 
