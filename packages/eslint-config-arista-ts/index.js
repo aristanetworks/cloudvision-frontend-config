@@ -39,7 +39,7 @@ module.exports = {
         selector: 'property',
         format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
         filter: {
-          regex: '(delete_all|path_elements)',
+          regex: '(_skipLogging_|delete_all|path_elements)',
           match: false,
         },
       },
