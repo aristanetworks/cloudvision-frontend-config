@@ -54,6 +54,7 @@ module.exports = {
         },
       },
     ],
+    'camelcase': 'off',
     'flowtype/no-types-missing-file-annotation': 0,
     'import/default': 'off',
     'import/named': 'off',
