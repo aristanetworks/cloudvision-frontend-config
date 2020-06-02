@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.17](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.16...eslint-config-arista-ts@1.1.17) (2020-06-02)
+
+
+### Bug Fixes
+
+* **eslint-config-arista-ts:** allow PascalCase for properties ([#44](https://github.com/aristanetworks/cloudvision-frontend-config/issues/44)) ([c1f20d8](https://github.com/aristanetworks/cloudvision-frontend-config/commit/c1f20d8a0141e199694958043c6724e8a6f35cda))
+
+
+
+
+
 ## [1.1.16](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.15...eslint-config-arista-ts@1.1.16) (2020-06-02)
 
 
