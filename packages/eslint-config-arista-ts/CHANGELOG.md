@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.16](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.15...eslint-config-arista-ts@1.1.16) (2020-06-02)
+
+
+### Bug Fixes
+
+* **eslint-config-arista-ts:** add formatting rules for properties ([#43](https://github.com/aristanetworks/cloudvision-frontend-config/issues/43)) ([8a9812d](https://github.com/aristanetworks/cloudvision-frontend-config/commit/8a9812d92a86fa3a53eefe0ea67c656cc0a6ef37))
+
+
+
+
+
 ## [1.1.15](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.14...eslint-config-arista-ts@1.1.15) (2020-06-02)
 
 
