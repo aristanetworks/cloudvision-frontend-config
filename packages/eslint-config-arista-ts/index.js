@@ -29,13 +29,15 @@ module.exports = {
     ],
     '@typescript-eslint/naming-convention': [
       'error',
+      // TODO: Consider using more specific selectors and formats. For instance, function names
+      // should always be camelCase and class/component names should always be PascalCase.
       {
         selector: 'default',
-        format: ['camelCase'],
+        format: ['camelCase', 'UPPER_CASE'],
       },
       {
         selector: 'property',
-        format: ['camelCase'],
+        format: ['camelCase', 'UPPER_CASE'],
         filter: {
           regex: '(delete_all|path_elements)',
           match: false,
