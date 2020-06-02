@@ -42,6 +42,11 @@ module.exports = {
       },
       {
         selector: 'property',
+        format: ['camelCase', 'UPPER_CASE'],
+      },
+      {
+        // This rule is similar to the old global exception list (which no longer exists).
+        selector: 'property',
         format: null,
         filter: {
           regex: '(_skipLogging_|delete_all|path_elements)',
