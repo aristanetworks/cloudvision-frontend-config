@@ -33,11 +33,11 @@ module.exports = {
       // should always be camelCase and class/component names should always be PascalCase.
       {
         selector: 'default',
-        format: ['camelCase', 'UPPER_CASE'],
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
       },
       {
         selector: 'property',
-        format: ['camelCase', 'UPPER_CASE'],
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
         filter: {
           regex: '(delete_all|path_elements)',
           match: false,
