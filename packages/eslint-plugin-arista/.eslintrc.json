@@ -9,12 +9,7 @@
     ],
     "arrow-body-style": "off",
     "arrow-parens": "off",
-    "camelcase": [
-      "error",
-      {
-        "allow": ["delete_all", "path_elements"]
-      }
-    ],
+    "camelcase": "error",
     "class-methods-use-this": "off",
     "curly": ["error", "all"],
     "flowtype/generic-spacing": "off",
@@ -45,7 +40,7 @@
     "import/no-unresolved": "off",
     "import/order": "off",
     "import/prefer-default-export": "off",
-    "indent": "off", // prettier will take care of indentation
+    "indent": "off",
     "max-len": [
       "error",
       {
