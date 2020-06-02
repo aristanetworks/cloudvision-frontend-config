@@ -36,6 +36,11 @@ module.exports = {
         format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
       },
       {
+        selector: 'parameter',
+        format: ['camelCase'],
+        leadingUnderscore: 'allow',
+      },
+      {
         selector: 'property',
         format: null,
         filter: {
