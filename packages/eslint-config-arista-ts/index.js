@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         selector: 'property',
-        format: ['camelCase', 'UPPER_CASE'],
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
       },
       {
         // This rule is similar to the old global exception list (which no longer exists).
