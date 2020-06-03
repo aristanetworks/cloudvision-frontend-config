@@ -22,6 +22,15 @@ module.exports = {
         'minimumDescriptionLength': 10,
       },
     ],
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        types: {
+          // TODO: Remove this later, when we've figured out a workable replacement for `{}`.
+          '{}': false,
+        },
+      },
+    ],
     '@typescript-eslint/explicit-function-return-type': [
       'error',
       {
