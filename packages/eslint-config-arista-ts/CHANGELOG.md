@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.19](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.18...eslint-config-arista-ts@1.1.19) (2020-06-03)
+
+
+### Bug Fixes
+
+* **eslint-config-arista-ts:** allow "ts-expect-error" ([#46](https://github.com/aristanetworks/cloudvision-frontend-config/issues/46)) ([f9488c3](https://github.com/aristanetworks/cloudvision-frontend-config/commit/f9488c3cb0d8f88c25e756712bf05a59f6ff7dd6))
+* **eslint-config-arista-ts:** allow `{}` as a type for now ([#47](https://github.com/aristanetworks/cloudvision-frontend-config/issues/47)) ([e872ee0](https://github.com/aristanetworks/cloudvision-frontend-config/commit/e872ee0004ef6066fdaf8a642c4b2be0fad41a90))
+
+
+
+
+
 ## [1.1.18](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.17...eslint-config-arista-ts@1.1.18) (2020-06-02)
 
 
