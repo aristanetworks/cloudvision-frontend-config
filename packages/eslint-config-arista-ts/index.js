@@ -39,11 +39,13 @@ module.exports = {
     ],
     '@typescript-eslint/naming-convention': [
       'error',
-      // TODO: Consider using more specific selectors and formats. For instance, function names
-      // should always be camelCase and class/component names should always be PascalCase.
       {
         selector: 'default',
         format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+      },
+      {
+        selector: 'function',
+        format: ['camelCase', 'PascalCase'],
       },
       {
         selector: 'parameter',
@@ -51,8 +53,8 @@ module.exports = {
         leadingUnderscore: 'allow',
       },
       {
-        selector: 'property',
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        selector: 'typeLike',
+        format: ['PascalCase'],
       },
       {
         // This rule is similar to the old global exception list (which no longer exists).
