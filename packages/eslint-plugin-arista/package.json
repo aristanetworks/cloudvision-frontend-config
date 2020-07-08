@@ -16,7 +16,7 @@
     "test:cov": "npm run test"
   },
   "dependencies": {
-    "lodash": "4.17.15"
+    "lodash": "4.17.19"
   },
   "devDependencies": {
     "@arista/prettier-config": "1.1.3",
