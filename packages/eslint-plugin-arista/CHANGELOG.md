@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.37](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-plugin-arista@0.1.36...eslint-plugin-arista@0.1.37) (2020-09-15)
+
+**Note:** Version bump only for package eslint-plugin-arista
+
+
+
+
+
 ## [0.1.36](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-plugin-arista@0.1.35...eslint-plugin-arista@0.1.36) (2020-07-27)
 
 **Note:** Version bump only for package eslint-plugin-arista
