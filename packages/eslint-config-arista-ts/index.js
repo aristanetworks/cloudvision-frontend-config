@@ -66,6 +66,7 @@ module.exports = {
         },
       },
     ],
+    '@typescript-eslint/no-non-null-assertion': 'off',
     'camelcase': 'off',
     'flowtype/no-types-missing-file-annotation': 0,
     'import/default': 'off',

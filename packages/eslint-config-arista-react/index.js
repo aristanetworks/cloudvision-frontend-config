@@ -23,7 +23,7 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-quotes': ['error', 'prefer-single'],
     'react/destructuring-assignment': 'off',
-    'react/forbid-prop-types': 'off',
+    'react/forbid-prop-types': 'error',
     'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-curly-newline': 'off',
     'react/jsx-filename-extension': 'off',
