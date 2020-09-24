@@ -26,7 +26,7 @@ module.exports = {
       'error',
       {
         types: {
-          // TODO: Remove this later, when we've figured out a workable replacement for `{}`.
+          // TODO: Remove this later, when we've figured out a workable replacement for `{}`
           '{}': false,
         },
       },
@@ -35,6 +35,16 @@ module.exports = {
       'error',
       {
         allowExpressions: true,
+      },
+    ],
+    '@typescript-eslint/explicit-member-accessibility': [
+      'error',
+      {
+        accessibility: 'explicit',
+        overrides: {
+          accessors: 'explicit',
+          parameterProperties: 'off',
+        },
       },
     ],
     '@typescript-eslint/naming-convention': [
@@ -57,7 +67,7 @@ module.exports = {
         format: ['PascalCase'],
       },
       {
-        // This rule is similar to the old global exception list (which no longer exists).
+        // This rule is similar to the old global exception list (which no longer exists)
         selector: 'property',
         format: null,
         filter: {
