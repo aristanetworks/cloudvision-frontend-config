@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.24...eslint-config-arista-ts@1.2.0) (2020-09-24)
+
+
+### Features
+
+* **eslint-ts:** Add explicit member rule ([#85](https://github.com/aristanetworks/cloudvision-frontend-config/issues/85)) ([f509b31](https://github.com/aristanetworks/cloudvision-frontend-config/commit/f509b31d4270918f045e310162b2d886e846aa48))
+
+
+
+
+
 ## [1.1.24](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.23...eslint-config-arista-ts@1.1.24) (2020-09-21)
 
 **Note:** Version bump only for package eslint-config-arista-ts
