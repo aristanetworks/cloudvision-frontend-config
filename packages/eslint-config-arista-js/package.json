@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-arista-js",
-  "version": "1.1.29",
+  "version": "1.1.30",
   "description": "Arista's eslint config for JavaScript code",
   "author": "extensions@arista.com",
   "homepage": "http://www.arista.com",
@@ -24,7 +24,7 @@
   "dependencies": {
     "babel-eslint": "10.1.0",
     "confusing-browser-globals": "1.0.9",
-    "eslint-plugin-arista": "0.1.38",
+    "eslint-plugin-arista": "0.1.39",
     "eslint-plugin-flowtype": "5.2.0",
     "eslint-plugin-import": "2.22.1"
   },
