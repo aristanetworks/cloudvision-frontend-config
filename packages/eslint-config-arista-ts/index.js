@@ -96,13 +96,9 @@ module.exports = {
         format: ['PascalCase'],
       },
       {
-        // This rule is similar to the old global exception list (which no longer exists)
         selector: 'property',
-        format: null,
-        filter: {
-          regex: '(_skipLogging_|delete_all|path_elements)',
-          match: true,
-        },
+        format: ['camelCase', 'snake_case', 'PascalCase'],
+        leadingUnderscore: 'allow',
       },
     ],
     /**
