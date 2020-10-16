@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.2.0...eslint-config-arista-ts@1.3.0) (2020-10-16)
+
+
+### Features
+
+* **eslint-ts:** Add `consistent-type-definitions` ([#91](https://github.com/aristanetworks/cloudvision-frontend-config/issues/91)) ([2bb579e](https://github.com/aristanetworks/cloudvision-frontend-config/commit/2bb579e092eb7226332c7060bc2a4b463cee9add))
+
+
+
+
+
 # [1.2.0](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.1.24...eslint-config-arista-ts@1.2.0) (2020-09-24)
 
 
