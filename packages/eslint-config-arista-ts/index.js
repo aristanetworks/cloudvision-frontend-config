@@ -73,6 +73,11 @@ module.exports = {
       },
     ],
     /**
+     * Enforce method signature style `prop(): void` over property `prop: () => void`.
+     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/method-signature-style.md
+     */
+    '@typescript-eslint/method-signature-style': ['error', 'method'],
+    /**
      * Enforce variable naming schemes.
      * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
      */
