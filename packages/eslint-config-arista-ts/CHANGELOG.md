@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.3.1...eslint-config-arista-ts@1.4.0) (2020-10-20)
+
+
+### Features
+
+* **eslint-ts:** Add method-signature-style to config ([#95](https://github.com/aristanetworks/cloudvision-frontend-config/issues/95)) ([0bafc74](https://github.com/aristanetworks/cloudvision-frontend-config/commit/0bafc74b68d51b85f109b5902c1e58216a7cdde7))
+
+
+
+
+
 ## [1.3.1](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.3.0...eslint-config-arista-ts@1.3.1) (2020-10-16)
 
 **Note:** Version bump only for package eslint-config-arista-ts
