@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "babel-eslint": "10.1.0",
-    "confusing-browser-globals": "1.0.9",
+    "confusing-browser-globals": "1.0.10",
     "eslint-plugin-arista": "0.1.40",
     "eslint-plugin-flowtype": "5.2.0",
     "eslint-plugin-import": "2.22.1"
