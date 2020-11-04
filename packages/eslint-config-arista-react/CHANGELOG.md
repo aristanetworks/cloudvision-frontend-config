@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.28](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-react@0.3.27...eslint-config-arista-react@0.3.28) (2020-11-04)
+
+
+### Bug Fixes
+
+* **package.json:** update homepage and add repo ([#101](https://github.com/aristanetworks/cloudvision-frontend-config/issues/101)) ([689e677](https://github.com/aristanetworks/cloudvision-frontend-config/commit/689e677dd70e10b14093806cbbd8eca28e35bd23))
+
+
+
+
+
 ## [0.3.27](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-react@0.3.26...eslint-config-arista-react@0.3.27) (2020-11-03)
 
 **Note:** Version bump only for package eslint-config-arista-react
