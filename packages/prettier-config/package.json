@@ -3,7 +3,11 @@
   "version": "1.1.3",
   "description": "Prettier config for Arista",
   "author": "extensions@arista.com",
-  "homepage": "http://www.arista.com",
+  "homepage": "https://github.com/aristanetworks/cloudvision-frontend-config/tree/trunk/packages/prettier-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aristanetworks/cloudvision-frontend-config.git"
+  },
   "license": "MIT",
   "main": "index.json",
   "keywords": [

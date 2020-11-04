@@ -3,7 +3,11 @@
   "version": "0.1.41",
   "description": "Arista's eslint plugins",
   "author": "extensions@arista.com",
-  "homepage": "http://www.arista.com",
+  "homepage": "https://github.com/aristanetworks/cloudvision-frontend-config/tree/trunk/packages/eslint-plugin-arista",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aristanetworks/cloudvision-frontend-config.git"
+  },
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {

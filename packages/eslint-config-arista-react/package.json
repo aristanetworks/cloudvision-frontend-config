@@ -3,7 +3,11 @@
   "version": "0.3.27",
   "description": "Arista's eslint config for React/JSX code",
   "author": "extensions@arista.com",
-  "homepage": "http://www.arista.com",
+  "homepage": "https://github.com/aristanetworks/cloudvision-frontend-config/tree/trunk/packages/eslint-config-arista-react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aristanetworks/cloudvision-frontend-config.git"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": {
