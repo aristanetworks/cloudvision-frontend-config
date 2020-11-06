@@ -34,7 +34,7 @@
     "@arista/prettier-config": "1.1.4",
     "babel-eslint": "10.1.0",
     "eslint": "6.8.0",
-    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-arista-js": "1.1.33",
     "eslint-plugin-arista": "0.1.42",
     "eslint-plugin-flowtype": "5.2.0",
