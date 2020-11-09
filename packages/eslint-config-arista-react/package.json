@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-arista-react",
-  "version": "0.3.28",
+  "version": "0.3.29",
   "description": "Arista's eslint config for React/JSX code",
   "author": "extensions@arista.com",
   "homepage": "https://github.com/aristanetworks/cloudvision-frontend-config/tree/trunk/packages/eslint-config-arista-react",
@@ -26,14 +26,14 @@
     "styleguide"
   ],
   "dependencies": {
-    "eslint-config-arista-js": "1.1.33"
+    "eslint-config-arista-js": "1.1.34"
   },
   "devDependencies": {
     "@arista/prettier-config": "1.1.4",
     "babel-eslint": "10.1.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.2.1",
-    "eslint-plugin-arista": "0.1.42",
+    "eslint-plugin-arista": "0.1.43",
     "eslint-plugin-flowtype": "5.2.0",
     "eslint-plugin-import": "2.22.1",
     "prettier": "2.1.2"
