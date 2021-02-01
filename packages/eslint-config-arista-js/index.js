@@ -1,6 +1,6 @@
 const confusingBrowserGlobals = require('confusing-browser-globals');
 
-const aristaRestrictedGlobals = ['error', 'isFinite', 'isNaN', 'window'].concat(
+const aristaRestrictedGlobals = ['error', 'isFinite', 'isNaN'].concat(
   confusingBrowserGlobals.filter((value) => value !== 'self'),
 );
 
