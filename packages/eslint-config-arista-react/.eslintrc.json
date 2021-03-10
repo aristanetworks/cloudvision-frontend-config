@@ -1,3 +1,3 @@
 {
-  "extends": ["airbnb-base", "arista-js"]
+  "extends": ["arista-js"]
 }

@@ -12,22 +12,11 @@
   "main": "src/index.js",
   "scripts": {
     "check": "npm run lint && npm run test && npm run prettier-check",
-    "lint": "eslint --max-warnings 0 src/**/*.js tests/**/*.js",
+    "lint": "eslint -c ../eslint-config-arista-js/index.js --max-warnings 0 src/**/*.js tests/**/*.js",
     "prepare": "npm run check && npm run test",
     "prettier-check": "prettier -c src/**/*.js tests/**/*.js",
     "prettier-fix": "prettier --write src/**/*.js tests/**/*.js",
     "test": "node tests/rules/import-order.js",
     "test:cov": "npm run test"
-  },
-  "dependencies": {
-    "lodash": "4.17.21"
-  },
-  "devDependencies": {
-    "@arista/prettier-config": "1.1.4",
-    "eslint": "6.8.0",
-    "eslint-config-airbnb-base": "14.2.1",
-    "eslint-plugin-flowtype": "5.3.1",
-    "eslint-plugin-import": "2.22.1",
-    "prettier": "2.2.1"
   }
 }

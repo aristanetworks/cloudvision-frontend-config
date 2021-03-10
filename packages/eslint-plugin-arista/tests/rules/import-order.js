@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const RuleTester = require('eslint').RuleTester;
 const rule = require('../../src/rules/import-order');
 
