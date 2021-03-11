@@ -1,45 +1,40 @@
 module.exports = {
-  plugins: ['jsx-a11y', 'react', 'react-hooks'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ['react', 'react-hooks'],
   rules: {
-    'camelcase': [
-      'error',
-      {
-        allow: ['^UNSAFE_'],
-        properties: 'never',
-      },
-    ],
-    'jsx-a11y/anchor-is-valid': 'off',
-    'jsx-a11y/click-events-have-key-events': 'off',
-    'jsx-a11y/control-has-associated-label': 'off',
-    'jsx-a11y/label-has-associated-control': [
-      'error',
-      {
-        controlComponents: ['MultiSelect'],
-      },
-    ],
-    'jsx-a11y/label-has-for': 'off',
-    'jsx-a11y/mouse-events-have-key-events': 'off',
-    'jsx-a11y/no-autofocus': 'off',
-    'jsx-a11y/no-static-element-interactions': 'off',
-    'jsx-quotes': ['error', 'prefer-single'],
-    'react/destructuring-assignment': 'off',
+    'react/default-props-match-prop-types': 'error',
     'react/forbid-prop-types': 'error',
     'react/jsx-boolean-value': ['error', 'always'],
-    'react/jsx-curly-newline': 'off',
-    'react/jsx-filename-extension': 'off',
-    'react/jsx-indent': 'off',
-    'react/jsx-one-expression-per-line': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/jsx-wrap-multilines': 'off',
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        allow: 'as-needed',
+        extensions: ['.jsx', '.tsx'],
+      },
+    ],
+    'react/jsx-fragments': 'error',
+    'react/jsx-key': 'error',
+    'react/jsx-no-target-blank': 'error',
+    'react/jsx-no-useless-fragment': 'error',
+    'react/jsx-pascal-case': 'error',
+    'react/jsx-sort-default-props': 'error',
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
     'react/no-access-state-in-setstate': 'error',
-    'react/no-array-index-key': 'off',
+    'react/no-deprecated': 'error',
     'react/no-direct-mutation-state': 'error',
     'react/no-find-dom-node': 'error',
     'react/no-string-refs': 'error',
-    'react/no-unused-prop-types': 'off',
-    'react/prefer-stateless-function': 'off',
-    'react/require-default-props': 'off',
-    'react/sort-comp': 'off',
+    'react/no-typos': 'error',
+    'react/no-unknown-property': 'error',
+    'react/no-unsafe': 'error',
+    'react/no-unused-state': 'error',
+    'react/prop-types': 'error',
+    'react/react-in-jsx-scope': 'error',
     'react/sort-prop-types': [
       'error',
       {
@@ -48,8 +43,11 @@ module.exports = {
         requiredFirst: true,
       },
     ],
-    'react/state-in-constructor': 'off',
-    'react/static-property-placement': 'off',
     'react-hooks/rules-of-hooks': 'error',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
 };

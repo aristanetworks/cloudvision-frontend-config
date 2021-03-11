@@ -12,7 +12,7 @@
   "main": "index.js",
   "scripts": {
     "check": "npm run lint && npm run prettier-check",
-    "lint": "eslint --max-warnings 0 -c index.js index.js",
+    "lint": "eslint -c index.js --max-warnings 0 index.js",
     "prepare": "npm run check",
     "prettier-check": "prettier -c *.js",
     "prettier-fix": "prettier --write *.js"
@@ -24,18 +24,5 @@
     "arista",
     "javascript",
     "styleguide"
-  ],
-  "dependencies": {
-    "babel-eslint": "10.1.0",
-    "confusing-browser-globals": "1.0.10",
-    "eslint-plugin-arista": "0.1.45",
-    "eslint-plugin-flowtype": "5.3.1",
-    "eslint-plugin-import": "2.22.1"
-  },
-  "devDependencies": {
-    "@arista/prettier-config": "1.1.4",
-    "eslint": "6.8.0",
-    "eslint-config-airbnb-base": "14.2.1",
-    "prettier": "2.2.1"
-  }
+  ]
 }

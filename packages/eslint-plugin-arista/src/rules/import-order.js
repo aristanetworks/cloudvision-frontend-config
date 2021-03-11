@@ -1,7 +1,6 @@
 // Report and auto-fix the line breaking and order of imports
 // according to the module import conventions
 
-const _ = require('lodash');
 const importedGroups = require('../utils/importedGroups');
 
 // The enforced order is the same as the order of each element in a group.
@@ -14,7 +13,7 @@ const DEFAULT_GROUPS = [
   'currentDirectory',
   'stylesheet',
 ];
-const DEFAULT_GROUPS_FLATTENED = _.flatten(DEFAULT_GROUPS);
+const DEFAULT_GROUPS_FLATTENED = DEFAULT_GROUPS.flat();
 const ALL_WHITESPACE = /^\s*$/;
 
 function addNewBlankLines(currentImportNode, prevImportNode) {
@@ -193,7 +192,7 @@ function getBlankLinesCount(context, firstNode, secondNode) {
  * @param groups - an array of import groups
  */
 function isGroupOfUnknownType(groups) {
-  const res = _.flatten(groups).every((group) => DEFAULT_GROUPS_FLATTENED.includes(group));
+  const res = groups.flat().every((group) => DEFAULT_GROUPS_FLATTENED.includes(group));
 
   if (!res) {
     throw new Error('Incorrect configuration of the rule: Unknown group type');
@@ -205,7 +204,7 @@ function isGroupOfUnknownType(groups) {
  * @param groups - an array of import groups
  */
 function isGroupDuplicate(groups) {
-  const res = _.flatten(groups).every((group, index, self) => self.indexOf(group) === index);
+  const res = groups.flat().every((group, index, self) => self.indexOf(group) === index);
 
   if (!res) {
     throw new Error('Incorrect configuration of the rule: duplicated groups');
@@ -356,7 +355,7 @@ function reportAndFixBlankLines(context, importedItems) {
       }
     } else if (index === 0 && commentsBeforeCurrentNode.length > 0) {
       // There are comments before the first import
-      const lastCommentNode = _.last(commentsBeforeCurrentNode);
+      const lastCommentNode = commentsBeforeCurrentNode[commentsBeforeCurrentNode.length - 1];
       if (lastCommentNode.loc.end.line + 1 === currentImportNode.loc.start.line) {
         // There are no one blank line between the first import and the comments above
         context.report({

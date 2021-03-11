@@ -1,39 +1,24 @@
 module.exports = {
-  extends: ['plugin:@typescript-eslint/recommended'],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './packages/**/tsconfig.json',
-    tsconfigRootDir: __dirname,
-    createDefaultProgram: true,
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
   },
-  plugins: ['@typescript-eslint'],
+  globals: {
+    BigInt: 'readonly',
+  },
+  parser: '@typescript-eslint/parser',
+  plugins: ['arista', 'import', '@typescript-eslint'],
   rules: {
-    /**
-     * Enforce `T[]` over `Array<T>` usage.
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/array-type.md
-     */
-    '@typescript-eslint/array-type': [
-      'error',
-      {
-        default: 'array',
-      },
-    ],
-    /**
-     * Manage "@ts-ignore" / "@ts-expect-error" comments.
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md
-     */
+    '@typescript-eslint/adjacent-overload-signatures': 'error',
+    '@typescript-eslint/array-type': ['error', { default: 'array' }],
     '@typescript-eslint/ban-ts-comment': [
       'error',
       {
-        'ts-expect-error': 'allow-with-description',
-        'ts-ignore': 'allow-with-description',
         'minimumDescriptionLength': 10,
+        'ts-expect-error': 'allow-with-description',
       },
     ],
-    /**
-     * Ban `object` / `Function` types etc.
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
-     */
     '@typescript-eslint/ban-types': [
       'error',
       {
@@ -43,25 +28,10 @@ module.exports = {
         },
       },
     ],
-    /**
-     * Enforce `interface` for object definitions.
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-definitions.md
-     */
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-    /**
-     * Enforce return types for functions.
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
-     */
-    '@typescript-eslint/explicit-function-return-type': [
-      'error',
-      {
-        allowExpressions: true,
-      },
-    ],
-    /**
-     * Enforce `public` / `private` / `protected` member accessibility modifiers for classes.
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md
-     */
+    '@typescript-eslint/default-param-last': 'error',
+    '@typescript-eslint/dot-notation': 'error',
+    '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
     '@typescript-eslint/explicit-member-accessibility': [
       'error',
       {
@@ -72,15 +42,9 @@ module.exports = {
         },
       },
     ],
-    /**
-     * Enforce method signature style `prop(): void` over property `prop: () => void`.
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/method-signature-style.md
-     */
+    '@typescript-eslint/explicit-module-boundary-types': 'warn',
+    '@typescript-eslint/lines-between-class-members': 'error',
     '@typescript-eslint/method-signature-style': ['error', 'method'],
-    /**
-     * Enforce variable naming schemes.
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
-     */
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -107,42 +71,302 @@ module.exports = {
         trailingUnderscore: 'allow',
       },
     ],
-    /**
-     * Manage usage of the non-null assertion `!`.
-     * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
-     */
-    '@typescript-eslint/no-non-null-assertion': 'off',
-    /**
-     * Enforce camel case naming.
-     * @see https://eslint.org/docs/rules/camelcase
-     */
-    'camelcase': 'off',
-    /**
-     * Disallow Flow type imports, aliases, and annotations in files missing a Flow file
-     * declaration.
-     * @see https://github.com/gajus/eslint-plugin-flowtype/blob/master/.README/rules/no-types-missing-file-annotation.md
-     */
-    'flowtype/no-types-missing-file-annotation': 0,
-    /**
-     * Enforce default export from import.
-     * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
-     */
-    'import/default': 'off',
-    /**
-     * Enforce named exports from import.
-     * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
-     */
-    'import/named': 'off',
-    /**
-     * Enforce named exports from namespace import (`import * as Namespace from '...'`).
-     * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
-     */
-    'import/namespace': 'off',
-    /**
-     * Report use of an exported name as a property on the default export.
-     * @see https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
-     */
-    'import/no-named-as-default-member': 'off',
+    '@typescript-eslint/no-array-constructor': 'error',
+    '@typescript-eslint/no-dupe-class-members': 'error',
+    '@typescript-eslint/no-duplicate-imports': 'error',
+    '@typescript-eslint/no-empty-function': 'error',
+    '@typescript-eslint/no-empty-interface': 'error',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-extra-non-null-assertion': 'error',
+    '@typescript-eslint/no-implied-eval': 'error',
+    '@typescript-eslint/no-inferrable-types': 'error',
+    '@typescript-eslint/no-loop-func': 'error',
+    '@typescript-eslint/no-misused-new': 'error',
+    '@typescript-eslint/no-namespace': 'error',
+    '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
+    '@typescript-eslint/no-redeclare': 'error',
+    '@typescript-eslint/no-shadow': 'error',
+    '@typescript-eslint/no-this-alias': 'error',
+    '@typescript-eslint/no-throw-literal': 'error',
+    '@typescript-eslint/no-unused-expressions': 'error',
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-use-before-define': 'error',
+    '@typescript-eslint/no-useless-constructor': 'error',
+    '@typescript-eslint/no-var-requires': 'error',
+    '@typescript-eslint/prefer-as-const': 'error',
+    '@typescript-eslint/prefer-for-of': 'error',
+    '@typescript-eslint/prefer-includes': 'error',
+    '@typescript-eslint/prefer-namespace-keyword': 'error',
+    '@typescript-eslint/prefer-optional-chain': 'error',
+    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+    '@typescript-eslint/prefer-ts-expect-error': 'error',
+    '@typescript-eslint/return-await': 'error',
+    '@typescript-eslint/triple-slash-reference': 'error',
+    'arista/import-order': 'error',
+    'array-callback-return': 'error',
+    'block-scoped-var': 'error',
+    'consistent-return': 'error',
+    'constructor-super': 'error',
+    'default-case': 'error',
+    'eqeqeq': ['error', 'always', { null: 'ignore' }],
+    'for-direction': 'error',
+    'func-names': 'error',
+    'getter-return': 'error',
+    'guard-for-in': 'error',
+    'import/export': 'error',
+    'import/first': 'error',
+    'import/no-absolute-path': 'error',
+    'import/no-amd': 'error',
+    'import/no-cycle': 'error',
+    'import/no-deprecated': 'error',
+    'import/no-dynamic-require': 'error',
+    'import/no-extraneous-dependencies': ['error', { optionalDependencies: false }],
+    'import/no-mutable-exports': 'error',
+    'import/no-named-as-default': 'error',
+    'import/no-named-default': 'error',
+    'import/no-self-import': 'error',
+    'import/no-useless-path-segments': ['error', { commonjs: true }],
+    'import/no-webpack-loader-syntax': 'error',
+    'max-classes-per-file': ['error', 1],
+    'max-len': [
+      'error',
+      {
+        code: 100,
+        ignorePattern: '^\\s+(it|test)\\(',
+        ignoreUrls: true,
+      },
+    ],
+    'new-cap': ['error', { capIsNewExceptionPattern: '^Immutable' }],
+    'no-alert': ['warn'],
+    'no-array-constructor': 'error',
+    'no-async-promise-executor': 'error',
+    'no-bitwise': 'error',
+    'no-caller': 'error',
+    'no-case-declarations': 'error',
+    'no-class-assign': 'error',
+    'no-compare-neg-zero': 'error',
+    'no-cond-assign': ['error', 'always'],
+    'no-confusing-arrow': 'error',
+    'no-console': ['warn'],
+    'no-const-assign': 'error',
+    'no-constant-condition': ['warn'],
+    'no-control-regex': 'error',
+    'no-debugger': 'error',
+    'no-delete-var': 'error',
+    'no-dupe-args': 'error',
+    'no-dupe-keys': 'error',
+    'no-duplicate-case': 'error',
+    'no-else-return': ['error', { allowElseIf: false }],
+    'no-empty-character-class': 'error',
+    'no-empty-pattern': 'error',
+    'no-empty': 'error',
+    'no-eval': 'error',
+    'no-ex-assign': 'error',
+    'no-extend-native': 'error',
+    'no-extra-bind': 'error',
+    'no-extra-boolean-cast': 'error',
+    'no-extra-label': 'error',
+    'no-fallthrough': 'error',
+    'no-func-assign': 'error',
+    'no-global-assign': 'error',
+    'no-inner-declarations': 'error',
+    'no-invalid-regexp': 'error',
+    'no-iterator': 'error',
+    'no-label-var': 'error',
+    'no-labels': 'error',
+    'no-lone-blocks': 'error',
+    'no-lonely-if': 'error',
+    'no-misleading-character-class': 'error',
+    'no-mixed-operators': [
+      'error',
+      {
+        groups: [
+          ['&', '|', '^', '~', '<<', '>>', '>>>'],
+          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+          ['&&', '||'],
+          ['in', 'instanceof'],
+        ],
+      },
+    ],
+    'no-multi-assign': 'error',
+    'no-multi-str': 'error',
+    'no-nested-ternary': 'error',
+    'no-new-func': 'error',
+    'no-new-object': 'error',
+    'no-new-symbol': 'error',
+    'no-new-wrappers': 'error',
+    'no-new': 'error',
+    'no-obj-calls': 'error',
+    'no-octal-escape': 'error',
+    'no-octal': 'error',
+    'no-param-reassign': 'error',
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'no-proto': 'error',
+    'no-regex-spaces': 'error',
+    'no-restricted-globals': [
+      'error',
+      'addEventListener',
+      'blur',
+      'close',
+      'closed',
+      'confirm',
+      'defaultstatus',
+      'defaultStatus',
+      'event',
+      'external',
+      'find',
+      'focus',
+      'frameElement',
+      'frames',
+      'history',
+      'innerHeight',
+      'innerWidth',
+      'isFinite',
+      'isNaN',
+      'length',
+      'location',
+      'locationbar',
+      'menubar',
+      'moveBy',
+      'moveTo',
+      'name',
+      'onblur',
+      'onerror',
+      'onfocus',
+      'onload',
+      'onresize',
+      'onunload',
+      'open',
+      'opener',
+      'opera',
+      'outerHeight',
+      'outerWidth',
+      'pageXOffset',
+      'pageYOffset',
+      'parent',
+      'print',
+      'removeEventListener',
+      'resizeBy',
+      'resizeTo',
+      'screen',
+      'screenLeft',
+      'screenTop',
+      'screenX',
+      'screenY',
+      'scroll',
+      'scrollbars',
+      'scrollBy',
+      'scrollTo',
+      'scrollX',
+      'scrollY',
+      'status',
+      'statusbar',
+      'stop',
+      'toolbar',
+      'top',
+    ],
+    'no-restricted-properties': [
+      'error',
+      {
+        property: '__defineGetter__',
+        message: 'Use Object.defineProperty instead',
+      },
+      {
+        property: '__defineSetter__',
+        message: 'Use Object.defineProperty instead',
+      },
+      {
+        object: 'arguments',
+        property: 'callee',
+        message: 'arguments.callee is deprecated',
+      },
+      {
+        object: 'global',
+        property: 'isFinite',
+        message: 'Use Number.isFinite instead',
+      },
+      {
+        object: 'global',
+        property: 'isNaN',
+        message: 'Use Number.isNaN instead',
+      },
+      {
+        object: 'self',
+        property: 'isFinite',
+        message: 'Use Number.isFinite instead',
+      },
+      {
+        object: 'self',
+        property: 'isNaN',
+        message: 'Use Number.isNaN instead',
+      },
+      {
+        object: 'window',
+        property: 'isFinite',
+        message: 'Use Number.isFinite instead',
+      },
+      {
+        object: 'window',
+        property: 'isNaN',
+        message: 'Use Number.isNaN instead',
+      },
+      {
+        object: 'Math',
+        property: 'pow',
+        message: 'Use the exponentiation operator (**) instead',
+      },
+    ],
+    'no-return-assign': ['error', 'always'],
+    'no-script-url': 'error',
+    'no-self-assign': 'error',
+    'no-self-compare': 'error',
+    'no-sequences': 'error',
+    'no-shadow-restricted-names': 'error',
+    'no-sparse-arrays': 'error',
+    'no-tabs': 'error',
+    'no-template-curly-in-string': 'error',
+    'no-this-before-super': 'error',
+    'no-undef-init': 'error',
+    'no-underscore-dangle': ['error', { allow: ['_key', '_value'] }],
+    'no-unexpected-multiline': 'error',
+    'no-unneeded-ternary': ['error', { defaultAssignment: false }],
+    'no-unreachable': 'error',
+    'no-unsafe-finally': 'error',
+    'no-unsafe-negation': 'error',
+    'no-unused-labels': 'error',
+    'no-useless-catch': 'error',
+    'no-useless-computed-key': 'error',
+    'no-useless-concat': 'error',
+    'no-useless-escape': 'error',
+    'no-useless-rename': 'error',
+    'no-useless-return': 'error',
+    'no-var': 'error',
+    'no-void': 'error',
+    'no-with': 'error',
+    'object-curly-newline': 'error',
+    'object-shorthand': [
+      'error',
+      'always',
+      {
+        avoidQuotes: true,
+        ignoreConstructors: false,
+      },
+    ],
+    'one-var': ['error', 'never'],
+    'operator-assignment': ['error', 'always'],
+    'prefer-arrow-callback': 'error',
+    'prefer-const': ['error', { ignoreReadBeforeAssign: true }],
+    'prefer-numeric-literals': 'error',
+    'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
+    'prefer-rest-params': 'error',
+    'prefer-spread': 'error',
+    'require-yield': 'error',
+    'symbol-description': 'error',
+    'radix': 'error',
+    'use-isnan': 'error',
+    'valid-typeof': ['error', { requireStringLiterals: true }],
+    'vars-on-top': 'error',
+    'yoda': 'error',
   },
   overrides: [
     {
@@ -151,10 +375,6 @@ module.exports = {
         jest: true,
       },
       rules: {
-        /**
-         * Enforce return types for functions.
-         * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
-         */
         '@typescript-eslint/explicit-function-return-type': 'off',
       },
     },
