@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.4.6...eslint-config-arista-ts@2.0.0) (2021-03-11)
+
+
+* refactor!: rework all our eslint configs to be clearer (#145) ([44fc916](https://github.com/aristanetworks/cloudvision-frontend-config/commit/44fc916128e6b6cd80cd0f975310c21a42560988)), closes [#145](https://github.com/aristanetworks/cloudvision-frontend-config/issues/145)
+
+
+### BREAKING CHANGES
+
+* all configs follow a new structure now (see above)
+
+* Removed .eslintrc.json files in favor of the `-c` flag
+
+
+
+
+
 ## [1.4.6](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.4.5...eslint-config-arista-ts@1.4.6) (2021-02-01)
 
 **Note:** Version bump only for package eslint-config-arista-ts
