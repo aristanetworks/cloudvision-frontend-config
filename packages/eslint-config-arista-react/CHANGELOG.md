@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-react@0.4.0...eslint-config-arista-react@0.4.1) (2021-03-12)
+
+
+### Bug Fixes
+
+* **eslint-config-arista-react:** remove react/jsx-no-useless-fragment ([#146](https://github.com/aristanetworks/cloudvision-frontend-config/issues/146)) ([3571e73](https://github.com/aristanetworks/cloudvision-frontend-config/commit/3571e73f9dfc7ea3118601bb70c34a8e4419bad3))
+
+
+
+
+
 # [0.4.0](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-react@0.3.31...eslint-config-arista-react@0.4.0) (2021-03-11)
 
 
