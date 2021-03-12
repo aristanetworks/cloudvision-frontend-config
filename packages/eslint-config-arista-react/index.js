@@ -19,7 +19,6 @@ module.exports = {
     'react/jsx-fragments': 'error',
     'react/jsx-key': 'error',
     'react/jsx-no-target-blank': 'error',
-    'react/jsx-no-useless-fragment': 'error',
     'react/jsx-pascal-case': 'error',
     'react/jsx-sort-default-props': 'error',
     'react/jsx-uses-react': 'error',
