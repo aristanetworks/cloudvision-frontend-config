@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-arista",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Arista's eslint plugins",
   "author": "extensions@arista.com",
   "homepage": "https://github.com/aristanetworks/cloudvision-frontend-config/tree/trunk/packages/eslint-plugin-arista",
