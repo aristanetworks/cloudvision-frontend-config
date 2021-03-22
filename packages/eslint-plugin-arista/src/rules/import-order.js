@@ -93,55 +93,6 @@ function findTargetImportItem(importedItems, outOfOrderItem) {
 }
 
 /**
- * Get whether a AST node ends with a new line character
- * @param sourceCode - the SourceCode object
- * @param node - the AST node for an import
- * @returns 1 if there is a trailing new line or 2 if there isn't
- */
-function hasTrailingSpace(sourceCode, node) {
-  const text = sourceCode.text.substring(node.start, node.end + 1);
-  return text[text.length - 1] === '\n' ? 1 : 0;
-}
-
-/**
- * Implement the auto-fix to sort the imports
- * @param sourceCode - the SourceCode object
- * @param targetImportItemNode - the AST node for the target import
- * @param targetImportItemNode - the AST node for the unordered import
- * @param order - 'before' or 'after'
- * @returns the fixer object
- */
-function fixOutOfOrder(sourceCode, targetImportItemNode, outOfOrderItemNode, order) {
-  let textToFix;
-  const outOfOrderNodeWhiteSpace = hasTrailingSpace(sourceCode, outOfOrderItemNode);
-  const targetImportNodeWhiteSpace = hasTrailingSpace(sourceCode, targetImportItemNode);
-
-  if (outOfOrderNodeWhiteSpace) {
-    textToFix = sourceCode.text.substring(outOfOrderItemNode.start, outOfOrderItemNode.end + 1);
-  } else {
-    textToFix = sourceCode.text.substring(outOfOrderItemNode.start, outOfOrderItemNode.end);
-    textToFix += '\n';
-  }
-
-  const range =
-    order === 'after'
-      ? [outOfOrderItemNode.start, targetImportItemNode.end + targetImportNodeWhiteSpace]
-      : [targetImportItemNode.start, outOfOrderItemNode.end + outOfOrderNodeWhiteSpace];
-
-  let text =
-    textToFix + sourceCode.text.substring(targetImportItemNode.start, outOfOrderItemNode.start);
-  if (order === 'after') {
-    text =
-      sourceCode.text.substring(
-        outOfOrderItemNode.end + outOfOrderNodeWhiteSpace,
-        targetImportItemNode.end + targetImportNodeWhiteSpace,
-      ) + textToFix;
-  }
-
-  return (fixer) => fixer.replaceTextRange(range, text);
-}
-
-/**
  * Get an object with group-rank pairs.
  * @param groups - an array of import groups
  * the enforced order is the same as the order of each element in this groups
@@ -229,12 +180,11 @@ function reverse(importedItems) {
 }
 
 /**
- * Publish warnings and make fixes for sorting imports
+ * Publish warnings for sorting imports
  * @param context - the context object
  * @param importedItems - an array of import items
  */
-function reportAndFixOutOfOrder(context, importedItems) {
-  const sourceCode = context.getSourceCode();
+function reportOutOfOrder(context, importedItems) {
   const outOfOrder = findOutOfOrder(importedItems);
 
   if (!outOfOrder.length) {
@@ -254,7 +204,6 @@ function reportAndFixOutOfOrder(context, importedItems) {
       context.report({
         node: outOfOrderItem.node,
         message,
-        fix: fixOutOfOrder(sourceCode, targetImportItem.node, outOfOrderItem.node, order),
       });
     });
   } else {
@@ -266,7 +215,6 @@ function reportAndFixOutOfOrder(context, importedItems) {
       context.report({
         node: outOfOrderItem.node,
         message,
-        fix: fixOutOfOrder(sourceCode, targetImportItem.node, outOfOrderItem.node, order),
       });
     });
   }
@@ -328,23 +276,11 @@ function reportAndFixBlankLines(context, importedItems) {
       const PrevGroupRank = importedItems[index - 1].groupRank;
       const blankLinesBetween = getBlankLinesCount(context, prevImportNode, currentImportNode);
 
-      if (prevImportNode.loc.end.line === currentImportNode.loc.start.line) {
-        context.report({
-          node: currentImportNode,
-          message: 'Two imports cannot be on the same line',
-          fix: addNewBlankLines(currentImportNode, prevImportNode),
-        });
-      } else if (currentGroupRank !== PrevGroupRank && blankLinesBetween === 0) {
+      if (currentGroupRank !== PrevGroupRank && blankLinesBetween === 0) {
         context.report({
           node: currentImportNode,
           message: 'There should be one blank line between import groups',
           fix: addNewBlankLines(currentImportNode, prevImportNode),
-        });
-      } else if (currentGroupRank !== PrevGroupRank && blankLinesBetween > 1) {
-        context.report({
-          node: currentImportNode,
-          message: 'There should not be more than one blank line between import groups',
-          fix: removeBlankLines(context, currentImportNode, prevImportNode),
         });
       } else if (currentGroupRank === PrevGroupRank && blankLinesBetween !== 0) {
         context.report({
@@ -353,31 +289,6 @@ function reportAndFixBlankLines(context, importedItems) {
           fix: removeBlankLines(context, currentImportNode, prevImportNode),
         });
       }
-    } else if (index === 0 && commentsBeforeCurrentNode.length > 0) {
-      // There are comments before the first import
-      const lastCommentNode = commentsBeforeCurrentNode[commentsBeforeCurrentNode.length - 1];
-      if (lastCommentNode.loc.end.line + 1 === currentImportNode.loc.start.line) {
-        // There are no one blank line between the first import and the comments above
-        context.report({
-          node: currentImportNode,
-          message: 'There should be a blank line between the first import and comments ',
-          fix: addNewBlankLines(currentImportNode, lastCommentNode),
-        });
-      } else if (lastCommentNode.loc.end.line + 2 < currentImportNode.loc.start.line) {
-        // There are more than one blank line between the first import and the comments above
-        context.report({
-          node: currentImportNode,
-          message: 'There can only be one blank line between the first import and comments',
-          fix: removeBlankLines(context, currentImportNode, lastCommentNode),
-        });
-      }
-    } else if (index === 0 && currentImportNode.loc.start.line !== 1) {
-      // There are blank lines before the first import when there are no comments before
-      context.report({
-        node: currentImportNode,
-        message: 'There should not be any blank lines before the first import',
-        fix: removeBlankLines(context, currentImportNode),
-      });
     }
   });
 }
@@ -426,7 +337,7 @@ module.exports = {
       'Program:exit': function reportAndReset() {
         alphabetizeIndividualRanks(importedItems);
         reportAndFixBlankLines(context, importedItems);
-        reportAndFixOutOfOrder(context, importedItems);
+        reportOutOfOrder(context, importedItems);
 
         importedItems = [];
       },

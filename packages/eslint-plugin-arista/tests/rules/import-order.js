@@ -18,19 +18,19 @@ ruleTester.run('order', rule, {
         "import _ from 'lodash';\n" +
         "import PropTypes from 'prop-types';\n" +
         "import React, { Component } from 'react';\n" +
-        "import { Button, Modal } from 'react-bootstrap';",
+        "import { Button, Modal } from 'react-bootstrap';\n",
     },
     {
       // Testing internal npm packages
       code:
         "import { NOTIF_TYPES } from '@arista/aeris-connector';\n" +
-        "import { createReducer } from '@arista/redux-typed-reducer';",
+        "import { createReducer } from '@arista/redux-typed-reducer';\n",
     },
     {
       // Testing webpack alias i.e. geiger-* and modules/main
       code:
         "import MediaObj from 'geiger-components/MediaObj';\n" +
-        "import { formatEventTimestamp } from 'geiger-utils/formatTime';",
+        "import { formatEventTimestamp } from 'geiger-utils/formatTime';\n",
     },
     {
       // Testing more webpack alias i.e. geiger-* and modules/main
@@ -40,18 +40,17 @@ ruleTester.run('order', rule, {
         "import { subscribe } from 'geiger-components/Subscribe';\n" +
         "import { POINT_IN_TIME } from 'geiger-components/Subscribe/constants';\n" +
         "import Timestamp from 'geiger-components/Timestamp';\n" +
-        'import { blank_ARRAY, NO_DATA_MSG, COL_SORT_DIR, LIVE_TIME } ' +
-        "from 'geiger-constants';\n" +
+        "import { blank_ARRAY, NO_DATA_MSG, COL_SORT_DIR, LIVE_TIME } from 'geiger-constants';\n" +
         "import { DEVICE_SNAPSHOT_LIST } from 'geiger-metrics';\n" +
         "import * as GeigerPropTypes from 'geiger-prop-types';\n" +
         "import { formatFullDateTime } from 'geiger-utils/formatTime';\n" +
-        "import { selectors as MainSelectors } from 'modules/main';",
+        "import { selectors as MainSelectors } from 'modules/main';\n",
     },
     {
       // Testing local imports from other directories in 'this' module
       code:
         "import EventListItem from 'modules/events/components/EventListItem';\n" +
-        "import * as DeviceSelectors from 'modules/events/selectors';",
+        "import * as DeviceSelectors from 'modules/events/selectors';\n",
     },
     {
       // Testing more local imports from other directories in 'this' module
@@ -66,28 +65,33 @@ ruleTester.run('order', rule, {
         '  getEventTurbineId,\n' +
         '  setEventAndTimeWindow,\n' +
         '  filterEvents,\n' +
-        "} from 'modules/events/utils';",
+        "} from 'modules/events/utils';\n",
     },
     {
       // Testing local imports from the parent directory
-      code: "import DataTable from '..';\nimport { BATCHED_DATA } from '../constants';",
+      code:
+        "import DataTable from '..';\n" +
+        "import { BATCHED_DATA } from '../constants';\n" +
+        "import { processData } from '../utils';\n",
     },
     {
       // Testing more local imports from the parent directory
       code:
         "import { setData } from '../../utils';\n" +
-        'import { generateCategoricalData, generatePathPointerData } ' +
-        "from '../../utils/dataUtils';\n" +
+        "import { generateCategoricalData } from '../../utils/dataUtils';\n" +
         'import {\n' +
         '  randomArrayItem,\n' +
         '  randomIntRange,\n' +
         '  randomIPv4Address,\n' +
         '  randomMacAddress,\n' +
-        "} from '../../utils/randomUtils';",
+        "} from '../../utils/randomUtils';\n",
     },
     {
       // Testing local imports from the current directory
-      code: "import dataGenerator from './dataGenerator';\nimport { devices } from './devices';",
+      code:
+        "import dataGenerator from './dataGenerator';\n" +
+        "import { devices } from './devices';\n" +
+        "import { interfaces } from './intfs';\n",
     },
     {
       // Testing more local imports from the current directory
@@ -103,7 +107,7 @@ ruleTester.run('order', rule, {
         '  isDevicesSelected,\n' +
         '  prepareChanges,\n' +
         '  processDevices,\n' +
-        "} from './utils';",
+        "} from './utils';\n",
     },
     {
       // Testing imports from multiple different groups
@@ -204,22 +208,14 @@ ruleTester.run('order', rule, {
       code:
         "import './styles.less';\n" +
         '\n' +
+        "import PropTypes from 'prop-types';\n" +
         '\n' +
-        '\n' +
-        "import PropTypes from 'prop-types';import { devices } from './devices';\n" +
+        "import { devices } from './devices';\n" +
         "import React from 'react';\n",
       errors: [
         {
           ruleId: 'order',
           message: "'./styles.less' import should occur after 'react' import",
-        },
-        {
-          ruleId: 'order',
-          message: 'There should not be more than one blank line between import groups',
-        },
-        {
-          ruleId: 'order',
-          message: 'Two imports cannot be on the same line',
         },
         {
           ruleId: 'order',
@@ -234,17 +230,10 @@ ruleTester.run('order', rule, {
     {
       // Testing imports from multiple different groups with improper line breaking
       code:
-        '\n' +
-        '\n' +
-        '\n' +
         "import PropTypes from 'prop-types';\n" +
         "import EventListItem from 'modules/events/components/EventListItem';\n" +
         "import { BATCHED_DATA } from '../constants';\n",
       errors: [
-        {
-          ruleId: 'order',
-          message: 'There should not be any blank lines before the first import',
-        },
         {
           ruleId: 'order',
           message: 'There should be one blank line between import groups',
@@ -257,172 +246,6 @@ ruleTester.run('order', rule, {
     },
     // Testing auto-fix
     {
-      // Testing the auto-fix of alphabetizing the imports of the external packages
-      code:
-        "import PropTypes from 'prop-types';\n" +
-        "import _ from 'lodash';\n" +
-        "import moment from 'moment';\n",
-      output:
-        "import _ from 'lodash';\n" +
-        "import moment from 'moment';\n" +
-        "import PropTypes from 'prop-types';\n",
-      errors: [
-        {
-          ruleId: 'order',
-          message: "'prop-types' import should occur after 'moment' import",
-        },
-      ],
-    },
-    {
-      // Testing the auto-fix of alphabetizing the imports of the external packages
-      code:
-        "import moment from 'moment';\n" +
-        "import _ from 'lodash';\n" +
-        "import PropTypes from 'prop-types';\n",
-      output:
-        "import _ from 'lodash';\n" +
-        "import moment from 'moment';\n" +
-        "import PropTypes from 'prop-types';\n",
-      errors: [
-        {
-          ruleId: 'order',
-          message: "'lodash' import should occur before 'moment' import",
-        },
-      ],
-    },
-    {
-      // Testing the auto-fix of alphabetizing the imports of the internal packages
-      code:
-        "import { createReducer } from '@arista/redux-typed-reducer';\n" +
-        "import { NOTIF_TYPES } from '@arista/aeris-connector';\n",
-      output:
-        "import { NOTIF_TYPES } from '@arista/aeris-connector';\n" +
-        "import { createReducer } from '@arista/redux-typed-reducer';\n",
-      errors: [
-        {
-          ruleId: 'order',
-          message:
-            "'@arista/aeris-connector' import should occur " +
-            "before '@arista/redux-typed-reducer' import",
-        },
-      ],
-    },
-    {
-      // Testing the auto-fix of alphabetizing the imports of the internal packages
-      code:
-        "import { fromBinaryKey } from '@arista/cloudvision-connector';\n" +
-        "import { createReducer } from '@arista/redux-typed-reducer';\n" +
-        "import { actions as moduleParamsActions } from '@arista/redux-module-params';\n",
-      output:
-        "import { fromBinaryKey } from '@arista/cloudvision-connector';\n" +
-        'import { actions as moduleParamsActions } from ' +
-        "'@arista/redux-module-params';\n" +
-        "import { createReducer } from '@arista/redux-typed-reducer';\n",
-      errors: [
-        {
-          ruleId: 'order',
-          message:
-            "'@arista/redux-module-params' import should occur " +
-            "before '@arista/redux-typed-reducer' import",
-        },
-      ],
-    },
-    {
-      // Testing the auto-fix of alphabetizing the imports of
-      // the webpack alias i.e. geiger-* and modules/main
-      code:
-        "import { confirm } from 'geiger-components/Confirm';\n" +
-        "import disableIfReadOnly from 'geiger-components/disableIfReadOnly';\n" +
-        "import TableOverflowStyler from 'geiger-components/TableOverflowStyler';\n" +
-        "import withPermissions from 'geiger-components/withPermissions';\n" +
-        "import { PERMISSIONS } from 'geiger-constants';\n" +
-        'import { SNAPSHOT_CONFIG_PATH, SNAPSHOT_CONFIG_UIDS_PATH } ' +
-        "from 'geiger-data-paths';\n" +
-        "import { CVP_DATASETID } from 'geiger-metrics/constants';\n" +
-        "import * as GeigerPropTypes from 'geiger-prop-types';\n" +
-        "import { makeNoAccessMessage } from 'geiger-utils/permissionsUtils';\n" +
-        "import SnapshotConfigTable from 'geiger-views/SnapshotConfigTable';\n" +
-        "import { selectors as MainSelectors } from 'modules/main';\n",
-      output:
-        "import { confirm } from 'geiger-components/Confirm';\n" +
-        "import TableOverflowStyler from 'geiger-components/TableOverflowStyler';\n" +
-        "import disableIfReadOnly from 'geiger-components/disableIfReadOnly';\n" +
-        "import withPermissions from 'geiger-components/withPermissions';\n" +
-        "import { PERMISSIONS } from 'geiger-constants';\n" +
-        'import { SNAPSHOT_CONFIG_PATH, SNAPSHOT_CONFIG_UIDS_PATH } from ' +
-        "'geiger-data-paths';\n" +
-        "import { CVP_DATASETID } from 'geiger-metrics/constants';\n" +
-        "import * as GeigerPropTypes from 'geiger-prop-types';\n" +
-        "import { makeNoAccessMessage } from 'geiger-utils/permissionsUtils';\n" +
-        "import SnapshotConfigTable from 'geiger-views/SnapshotConfigTable';\n" +
-        "import { selectors as MainSelectors } from 'modules/main';\n",
-      errors: [
-        {
-          ruleId: 'order',
-          message:
-            "'geiger-components/TableOverflowStyler' import should occur " +
-            "before 'geiger-components/disableIfReadOnly' import",
-        },
-      ],
-    },
-    {
-      // Testing the auto-fix of alphabetizing local imports from other directories in the module
-      code:
-        "import { isPointInTimeEvent } from 'modules/events/utils';\n" +
-        "import DurationMessage from 'modules/events/components/DurationMessage';\n",
-      output:
-        "import DurationMessage from 'modules/events/components/DurationMessage';\n" +
-        "import { isPointInTimeEvent } from 'modules/events/utils';\n",
-      errors: [
-        {
-          ruleId: 'order',
-          message:
-            "'modules/events/components/DurationMessage' import should " +
-            "occur before 'modules/events/utils' import",
-        },
-      ],
-    },
-    {
-      // Testing the auto-fix of scoped external packages
-      code:
-        "import PropTypes from 'prop-types';\n" +
-        "import React from 'react';\n" +
-        'import { Histogram as DataUiHistogram, BarSeries, XAxis, YAxis } ' +
-        "from '@data-ui/histogram';\n",
-      output:
-        'import { Histogram as DataUiHistogram, BarSeries, XAxis, YAxis } ' +
-        "from '@data-ui/histogram';\n" +
-        "import PropTypes from 'prop-types';\n" +
-        "import React from 'react';\n",
-      errors: [
-        {
-          ruleId: 'order',
-          message: "'@data-ui/histogram' import should occur before 'prop-types' import",
-        },
-      ],
-    },
-    {
-      // Testing the auto-fix of alphabetizing local imports from the current directory
-      code:
-        'import {\n' +
-        '  CREATE,\n' +
-        '  DEFAULT,\n' +
-        "} from './constants';\n" +
-        "import TagNameAndValue from './TagNameAndValue';\n",
-      output:
-        "import TagNameAndValue from './TagNameAndValue';\n" +
-        'import {\n' +
-        '  CREATE,\n' +
-        '  DEFAULT,\n' +
-        "} from './constants';\n",
-      errors: [
-        {
-          ruleId: 'order',
-          message: "'./TagNameAndValue' import should occur before './constants' import",
-        },
-      ],
-    },
-    {
       // Testing the auto-fix of making proper line breaking
       code:
         "import PropTypes from 'prop-types';\n" +
@@ -450,14 +273,12 @@ ruleTester.run('order', rule, {
       code:
         "import { error } from 'geiger-utils/logger';\n" +
         '\n' +
-        'import { createNewTagAndValue, createTagValue } from ' +
-        "'geiger-utils/publish/tagUtils';\n" +
+        "import { createNewTagAndValue, createTagValue } from 'geiger-utils/publish/tagUtils';\n" +
         "import TagNameAndValue from './TagNameAndValue';\n" +
         "import { getAllTagTypes, getStaticTagTypes } from './utils';\n",
       output:
         "import { error } from 'geiger-utils/logger';\n" +
-        'import { createNewTagAndValue, createTagValue } from ' +
-        "'geiger-utils/publish/tagUtils';\n" +
+        "import { createNewTagAndValue, createTagValue } from 'geiger-utils/publish/tagUtils';\n" +
         '\n' +
         "import TagNameAndValue from './TagNameAndValue';\n" +
         "import { getAllTagTypes, getStaticTagTypes } from './utils';\n",
@@ -475,11 +296,6 @@ ruleTester.run('order', rule, {
     {
       // Testing the auto-fix of making proper line breaking
       code:
-        '\n' +
-        '\n' +
-        '\n' +
-        '\n' +
-        '\n' +
         "import _ from 'lodash';\n" +
         "import moment from 'moment';\n" +
         "import PropTypes from 'prop-types';\n" +
@@ -495,10 +311,6 @@ ruleTester.run('order', rule, {
         "import { NOTIF_TYPES } from '@arista/aeris-connector';\n" +
         "import { createReducer } from '@arista/redux-typed-reducer';\n",
       errors: [
-        {
-          ruleId: 'order',
-          message: 'There should not be any blank lines before the first import',
-        },
         {
           ruleId: 'order',
           message: 'There should be one blank line between import groups',
