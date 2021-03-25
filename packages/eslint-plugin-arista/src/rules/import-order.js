@@ -1,5 +1,6 @@
-// Report and auto-fix the line breaking and order of imports
-// according to the module import conventions
+/**
+ * Report errors regarding blank lines and import ordering according to Arista's conventions.
+ */
 
 const importedGroups = require('../utils/importedGroups');
 
@@ -14,11 +15,6 @@ const DEFAULT_GROUPS = [
   'stylesheet',
 ];
 const DEFAULT_GROUPS_FLATTENED = DEFAULT_GROUPS.flat();
-const ALL_WHITESPACE = /^\s*$/;
-
-function addNewBlankLines(currentImportNode, prevImportNode) {
-  return (fixer) => fixer.insertTextAfterRange([currentImportNode.start, prevImportNode.end], '\n');
-}
 
 /**
  * Sort and mutate the individual rank of each import within its own group alphabetically
@@ -241,30 +237,11 @@ function registerNode(context, node, name, groupRanks, importedItems) {
 }
 
 /**
- * Implement the auto-fix to remove blank lines
- * @param currentImportNode - the AST node for the second import declaration
- * @param prevImportNode - the AST node for the first import declaration
- * @returns the fixer object
- */
-function removeBlankLines(context, currentImportNode, prevImportNode) {
-  const sourceCode = context.getSourceCode();
-  const rangeToRemove = prevImportNode
-    ? [prevImportNode.end + 1, currentImportNode.start]
-    : [0, currentImportNode.start];
-
-  if (ALL_WHITESPACE.test(sourceCode.text.substring(rangeToRemove[0], rangeToRemove[1]))) {
-    // Only remove them when the all lines between are blank lines
-    return (fixer) => fixer.removeRange(rangeToRemove);
-  }
-  return undefined;
-}
-
-/**
- * Publish warnings and make fixes for proper line breaking
+ * Publish warnings for proper line breaking
  * @param context - the context object
  * @param importedItems - an array of import items
  */
-function reportAndFixBlankLines(context, importedItems) {
+function reportBlankLines(context, importedItems) {
   const sourceCode = context.getSourceCode();
   importedItems.forEach((currentImport, index) => {
     const currentImportNode = currentImport.node;
@@ -280,13 +257,11 @@ function reportAndFixBlankLines(context, importedItems) {
         context.report({
           node: currentImportNode,
           message: 'There should be one blank line between import groups',
-          fix: addNewBlankLines(currentImportNode, prevImportNode),
         });
       } else if (currentGroupRank === PrevGroupRank && blankLinesBetween !== 0) {
         context.report({
           node: currentImportNode,
           message: 'There should be no blank lines within an import group',
-          fix: removeBlankLines(context, currentImportNode, prevImportNode),
         });
       }
     }
@@ -296,7 +271,6 @@ function reportAndFixBlankLines(context, importedItems) {
 module.exports = {
   meta: {
     docs: {},
-    fixable: 'code',
     schema: [
       {
         type: 'object',
@@ -336,7 +310,7 @@ module.exports = {
       },
       'Program:exit': function reportAndReset() {
         alphabetizeIndividualRanks(importedItems);
-        reportAndFixBlankLines(context, importedItems);
+        reportBlankLines(context, importedItems);
         reportOutOfOrder(context, importedItems);
 
         importedItems = [];
