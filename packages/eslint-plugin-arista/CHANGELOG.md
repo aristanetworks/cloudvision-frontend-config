@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-plugin-arista@0.2.1...eslint-plugin-arista@0.2.2) (2021-03-25)
+
+
+### Bug Fixes
+
+* **eslint-plugin-arista:** remove all auto-fix code ([#148](https://github.com/aristanetworks/cloudvision-frontend-config/issues/148)) ([0c81c7f](https://github.com/aristanetworks/cloudvision-frontend-config/commit/0c81c7febe1f8fa5bdacc351dcac9698c87f092a))
+
+
+
+
+
 ## [0.2.1](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-plugin-arista@0.2.0...eslint-plugin-arista@0.2.1) (2021-03-22)
 
 
