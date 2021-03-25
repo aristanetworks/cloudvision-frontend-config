@@ -11,12 +11,11 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "check": "npm run lint && npm run test && npm run prettier-check",
+    "check": "npm run lint && npm run prettier-check && npm run test",
     "lint": "eslint -c ../eslint-config-arista-js/index.js --max-warnings 0 src/**/*.js tests/**/*.js",
-    "prepare": "npm run check && npm run test",
+    "prepare": "npm run check",
     "prettier-check": "prettier -c src/**/*.js tests/**/*.js",
     "prettier-fix": "prettier --write src/**/*.js tests/**/*.js",
-    "test": "node tests/rules/import-order.js",
-    "test:cov": "npm run test"
+    "test": "node tests/rules/import-order.js"
   }
 }
