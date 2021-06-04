@@ -13,7 +13,7 @@
     "eslint-plugin-arista": "0.2.0",
     "eslint-plugin-import": "2.23.4",
     "eslint": "6.8.0",
-    "lerna": "3.22.0",
+    "lerna": "4.0.0",
     "prettier": "2.3.0"
   }
 }
