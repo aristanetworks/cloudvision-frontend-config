@@ -16,6 +16,7 @@ module.exports = {
     'consistent-return': 'error',
     'camelcase': ['error', { allow: ['delete_all', 'path_elements', '^UNSAFE_'] }],
     'constructor-super': 'error',
+    'curly': ['error', 'all'],
     'default-case': 'error',
     'dot-notation': 'error',
     'eqeqeq': ['error', 'always', { null: 'ignore' }],
