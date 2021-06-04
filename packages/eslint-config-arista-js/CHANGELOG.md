@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-js@2.0.0...eslint-config-arista-js@2.0.1) (2021-06-04)
+
+
+### Bug Fixes
+
+* **eslint-config-arista-js:** enable curly rule ([#163](https://github.com/aristanetworks/cloudvision-frontend-config/issues/163)) ([6aaf753](https://github.com/aristanetworks/cloudvision-frontend-config/commit/6aaf753af301265c4c7aabaf0b6665ecf93f0129))
+
+
+
+
+
 # [2.0.0](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-js@1.1.36...eslint-config-arista-js@2.0.0) (2021-03-11)
 
 
