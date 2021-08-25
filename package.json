@@ -11,7 +11,7 @@
     "@arista/prettier-config": "1.1.4",
     "babel-eslint": "10.1.0",
     "eslint-plugin-arista": "0.2.0",
-    "eslint-plugin-import": "2.24.1",
+    "eslint-plugin-import": "2.24.2",
     "eslint": "6.8.0",
     "lerna": "4.0.0",
     "prettier": "2.3.2"
