@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@2.0.0...eslint-config-arista-ts@2.0.1) (2021-09-17)
+
+
+### Bug Fixes
+
+* **eslint:** Fix ignore unused lodash import issue ([#180](https://github.com/aristanetworks/cloudvision-frontend-config/issues/180)) ([92e6298](https://github.com/aristanetworks/cloudvision-frontend-config/commit/92e62989c8e9046d8c5e03fccd482a8e47c87f84))
+
+
+
+
+
 # [2.0.0](https://github.com/aristanetworks/cloudvision-frontend-config/compare/eslint-config-arista-ts@1.4.6...eslint-config-arista-ts@2.0.0) (2021-03-11)
 
 
