@@ -89,7 +89,7 @@ module.exports = {
     '@typescript-eslint/no-this-alias': 'error',
     '@typescript-eslint/no-throw-literal': 'error',
     '@typescript-eslint/no-unused-expressions': 'error',
-    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_\w+' }],
     '@typescript-eslint/no-use-before-define': 'error',
     '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/no-var-requires': 'error',
