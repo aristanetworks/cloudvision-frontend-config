@@ -30,7 +30,7 @@ parameters:
 executors:
   cloudvision-builder:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:14.18.1
 jobs:
   build-and-test:
     executor:
