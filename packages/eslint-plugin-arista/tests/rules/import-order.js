@@ -129,14 +129,8 @@ ruleTester.run('order', rule, {
         "import moment from 'moment';\n" +
         "import _ from 'lodash';\n",
       errors: [
-        {
-          ruleId: 'order',
-          message: "'moment' import should occur before 'prop-types' import",
-        },
-        {
-          ruleId: 'order',
-          message: "'lodash' import should occur before 'prop-types' import",
-        },
+        { message: "'moment' import should occur before 'prop-types' import" },
+        { message: "'lodash' import should occur before 'prop-types' import" },
       ],
     },
     {
@@ -147,14 +141,8 @@ ruleTester.run('order', rule, {
         '\n' +
         "import PropTypes from 'prop-types';\n",
       errors: [
-        {
-          ruleId: 'order',
-          message: "'lodash' import should occur before 'moment' import",
-        },
-        {
-          ruleId: 'order',
-          message: 'There should be no blank lines within an import group',
-        },
+        { message: "'lodash' import should occur before 'moment' import" },
+        { message: 'There should be no blank lines within an import group' },
       ],
     },
     {
@@ -166,14 +154,8 @@ ruleTester.run('order', rule, {
         "import PropTypes from 'prop-types';\n" +
         "import React from 'react';\n",
       errors: [
-        {
-          ruleId: 'order',
-          message: "'prop-types' import should occur before '@arista/aeris-connector' import",
-        },
-        {
-          ruleId: 'order',
-          message: "'react' import should occur before '@arista/aeris-connector' import",
-        },
+        { message: "'prop-types' import should occur before '@arista/aeris-connector' import" },
+        { message: "'react' import should occur before '@arista/aeris-connector' import" },
       ],
     },
     {
@@ -185,22 +167,10 @@ ruleTester.run('order', rule, {
         "import PropTypes from 'prop-types';\n" +
         "import React from 'react';\n",
       errors: [
-        {
-          ruleId: 'order',
-          message: 'There should be no blank lines within an import group',
-        },
-        {
-          ruleId: 'order',
-          message: 'There should be one blank line between import groups',
-        },
-        {
-          ruleId: 'order',
-          message: "'prop-types' import should occur before '@arista/aeris-connector' import",
-        },
-        {
-          ruleId: 'order',
-          message: "'react' import should occur before '@arista/aeris-connector' import",
-        },
+        { message: 'There should be no blank lines within an import group' },
+        { message: 'There should be one blank line between import groups' },
+        { message: "'prop-types' import should occur before '@arista/aeris-connector' import" },
+        { message: "'react' import should occur before '@arista/aeris-connector' import" },
       ],
     },
     {
@@ -213,18 +183,9 @@ ruleTester.run('order', rule, {
         "import { devices } from './devices';\n" +
         "import React from 'react';\n",
       errors: [
-        {
-          ruleId: 'order',
-          message: "'./styles.less' import should occur after 'react' import",
-        },
-        {
-          ruleId: 'order',
-          message: "'./devices' import should occur after 'react' import",
-        },
-        {
-          ruleId: 'order',
-          message: 'There should be one blank line between import groups',
-        },
+        { message: "'./styles.less' import should occur after 'react' import" },
+        { message: "'./devices' import should occur after 'react' import" },
+        { message: 'There should be one blank line between import groups' },
       ],
     },
     {
@@ -234,14 +195,8 @@ ruleTester.run('order', rule, {
         "import EventListItem from 'modules/events/components/EventListItem';\n" +
         "import { BATCHED_DATA } from '../constants';\n",
       errors: [
-        {
-          ruleId: 'order',
-          message: 'There should be one blank line between import groups',
-        },
-        {
-          ruleId: 'order',
-          message: 'There should be one blank line between import groups',
-        },
+        { message: 'There should be one blank line between import groups' },
+        { message: 'There should be one blank line between import groups' },
       ],
     },
   ],
