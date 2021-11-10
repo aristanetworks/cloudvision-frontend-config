@@ -58,7 +58,7 @@ jobs:
       - configure
       - run:
           name: Install dependencies
-          command: npm install
+          command: npm ci
       - node/install-packages
       - run:
           name: Version packages and create commit
@@ -73,7 +73,7 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          command: npm install
+          command: npm ci
       - node/install-packages
       - run:
           name: Publish to NPM
