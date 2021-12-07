@@ -13,7 +13,7 @@
     "@babel/eslint-parser": "7.16.3",
     "eslint-plugin-arista": "0.2.2",
     "eslint-plugin-import": "2.25.3",
-    "eslint": "8.4.0",
+    "eslint": "8.4.1",
     "lerna": "4.0.0",
     "prettier": "2.5.1"
   }
