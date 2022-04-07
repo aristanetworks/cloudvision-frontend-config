@@ -7,10 +7,7 @@ module.exports = {
   globals: {
     BigInt: 'readonly',
   },
-  parser: '@babel/eslint-parser',
-  parserOptions: {
-    requireConfigFile: false,
-  },
+  parser: '@typescript-eslint/parser',
   plugins: ['arista', 'import'],
   rules: {
     'arista/import-order': 'error',
