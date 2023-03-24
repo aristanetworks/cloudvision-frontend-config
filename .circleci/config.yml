@@ -30,7 +30,7 @@ parameters:
 executors:
   cloudvision-builder:
     docker:
-      - image: cimg/node:16.17.0
+      - image: cimg/node:16.19.1
 jobs:
   build-and-test:
     executor:
